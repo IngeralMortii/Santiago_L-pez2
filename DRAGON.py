@@ -19,7 +19,7 @@ def chooseCave():
     return cave
 
 def victory():
-    print('On our way, we found. . .a baby dragon?, it could be his son, possibly...there is the dragon!, wait he is calming down, he is meeting with his baby...they leave...we managed to survive for now...')
+    print('On our way, we found. . .a dragon?, it could be a baby dragon, possibly...there is an older dragon!, wait he is calming down, they leave...we managed to survive for now...')
 
 def history():
     print('You approach the cave...')
