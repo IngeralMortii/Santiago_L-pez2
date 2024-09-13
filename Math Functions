@@ -1,11 +1,34 @@
+
+
 def factorial(n):
     result = 1
     for i in range(2, n + 1):
-        result *= 1
+        result *= i
     return result
 
 
-list_num = (6, 12 15, 22)
+factorial_de_6 =factorial(6)
 
-for elem in list_num:
-    print(factorial(elem))
+print(factorial_de_6)
+
+
+
+
+
+
+
+
+
+# The other work is below
+
+
+
+print(5%2)
+
+
+def remainder(a,b):
+    print(a - (a/b*b))
+    
+    
+    remainder(5,2)
+    

@@ -1,2 +1,8 @@
-my_float = ??
-print(bool(my_float))   #  this prints "False"
+print(5%2)
+
+
+def remainder(a,b):
+    print(a - (a/b*b))
+    
+    
+    remainder(5,2)
