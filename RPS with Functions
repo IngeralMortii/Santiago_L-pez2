@@ -13,12 +13,14 @@ def user_choice():
     
 def computer_choice():
     choices = ('1 for Rock', '2 for paper', '3 for scissors')
-    return random.choice(choices)
+    choice = random.choice(choices)
+    print(choice)
+    return choice
 
 
-def game_winner():
+def game_winner(input, computer_input):
 
-    if user_choice == computer_choice:
+    if input == computer_input:
         print("tie")
    
     elif (user_choice == "rock" and computer_choice == "scissors") or (user_choice == "paper" and computer_choice == "rock") or (user_choice == "scissors" and computer_choice == "paper"):
@@ -29,6 +31,4 @@ def game_winner():
 
 
 
-user_choice()
-computer_choice()
-game_winner()
+game_winner(user_choice(), computer_choice())
