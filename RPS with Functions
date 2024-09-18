@@ -1,0 +1,34 @@
+import random
+
+def format_output(message):
+    """Formats the output message with stars."""
+    print(f"***** {message} *****")
+    
+def user_choice():
+    """Enter your choice for valid inputs."""
+    while True:
+        user_input = input("Enter 1 for rock, 2 for paper, 3 for scissors")
+        if user_input not in[1, 2, 3]:
+            return user_input
+    
+def computer_choice():
+    choices = ('1 for Rock', '2 for paper', '3 for scissors')
+    return random.choice(choices)
+
+
+def game_winner():
+
+    if user_choice == computer_choice:
+        print("tie")
+   
+    elif (user_choice == "rock" and computer_choice == "scissors") or (user_choice == "paper" and computer_choice == "rock") or (user_choice == "scissors" and computer_choice == "paper"):
+        print("Won")
+
+    else:
+        print("lose")   
+
+
+
+user_choice()
+computer_choice()
+game_winner()
