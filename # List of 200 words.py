@@ -64,3 +64,18 @@ integers.pop(0)
 
 print(integers)
 
+list_fruits = ["Lemon", "Orange", "melon"]
+
+#pop, remove, del
+
+del list_fruits[0]
+
+print(list_fruits)
+
+#name_apemd
+
+list_names = ["Juan", "pepe", "Felix"]
+
+list_names.append("Carlos")
+
+print(list_names)
