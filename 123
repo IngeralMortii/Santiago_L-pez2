@@ -1,0 +1,35 @@
+import csv
+
+def read_product(filename):
+    products = {}
+    with open(filename, mode="r", newline='') as csv_file:
+        reader = csv.reader(csv_file)
+        next(reader)
+
+        for row in reader:
+           key = row[0]
+           prod_desc = row[1]
+           prod_price = row[2]
+           products[key] = [prod_desc, prod_price]
+
+        return products
+
+def read_product_csv(filename):
+  products_id =[]
+  quantities = []
+  with open(filename, "rt") as csv_request:
+    reader = csv.reader(csv_request)
+    next(reader)
+
+    for row in reader:
+      products_id.append(row[0])
+      quantities.append(row[1])
+
+  return products_id, quantities
+
+def main():
+  products = read_product("products.csv")
+  products_id, quantities = read_product_csv("request.csv")[0]
+  print(products_id)
+
+main()
