@@ -28,8 +28,37 @@ def read_product_csv(filename):
   return products_id, quantities
 
 def main():
-  products = read_product("products.csv")
-  products_id, quantities = read_product_csv("request.csv")[0]
-  print(products_id)
+  products = read_product("/content/products12.csv")
+  products_id = read_product_csv("/content/request12.csv")[0]
+  order_quantities = read_product_csv("/content/request12.csv")[1]
+
+  print()
+  print("Mini super Python")
+  print()
+
+  subtotal = 0
+  total_item = 0
+
+  for i in range (len(products_id)):
+    product = products[products_id[i]]
+    name = product[0]
+    price = float(product[1])
+    quantity = order_quantities[i]
+    print(f"{name}: {price} x {quantity}")
+    subtotal += price * int(quantity)
+
+  print()
+  print(f"Subtotal: ${subtotal:.2f}")
+  print(f"Total item: {int(total_item)}")
+  print(f"Tax: ${subtotal * 0.06:.2f}")
+  print(f"Total: ${subtotal * 1.06:.2f}")
+
+  print()
+  payment = float(input("Payment: $"))
+  Change = payment - (subtotal * 1.06)
+  if Change < 0:
+    print("You need more money to pay")
+  else Change >= 0:
+    print(f"your change is: ${Change:.2f}")
 
 main()
